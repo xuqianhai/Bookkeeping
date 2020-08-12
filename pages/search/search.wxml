@@ -1,0 +1,42 @@
+<!--pages/search/search.wxml-->
+<view class="allConent">
+  <!-- 搜索 -->
+  <view class="search">
+    <input placeholder="请输入查询的名字:" name="name" bindinput="name" style="height: 100rpx;font-size: 70rpx;padding:30rpx;border-bottom:5rpx solid green" />
+    <button form-type="submit" bindtap="bindSearch" class="searchButton">查询</button>
+  </view>
+  <!-- 显示 -->
+  <view class="display">
+    <text class="text1"><text class="red" space="emsp" style="font-size:50rpx;padding: 20rpx" hidden="{{hidden}}">查询结果:</text></text>
+    <view wx:for="{{lists}}" wx:key="lists" class="list" hidden="{{hidden}}">
+      <form bindsubmit="bindsubmit">
+        <view style="font-size:45rpx" class="line">
+          <input value="{{item.id}}" name="id" class="input1" hidden="true" />
+          <view class="view1">
+            <text class="red" space="emsp">姓名:    </text>
+            <text>{{item.name}}</text>
+          </view>
+          <view class="view1">
+            <text class="red" space="emsp">事件:    </text>
+            <text>{{item.event}}</text>
+          </view>
+          <view class="view1">
+            <text class="red" space="emsp">金额:    </text>
+            <text>{{item.money}}</text>
+          </view>
+          <view class="view1">
+            <text class="red" space="emsp">备注:    </text>
+            <text>{{item.remarks}}</text>
+          </view>
+          <view style="display:flex">
+            <text class="red">操作:</text>
+            <button class="clearButton" form-type="submit" size="mini" style="width:50%">删除该记录</button>
+
+          </view>
+        </view>
+      </form>
+
+    </view>
+    <button open-type="share" class="searchButton" hidden="{{hidden}}">转账给朋友</button>
+  </view>
+</view>

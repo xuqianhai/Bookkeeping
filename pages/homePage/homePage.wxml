@@ -1,0 +1,29 @@
+<view class="allHome">
+  <view class="add">
+    <button class="button1" style="width:350rpx;height:350rpx;margin-top:200rpx;" bindtap="addButton">
+      <view class="buttonContent">
+        <text>添加</text>
+        <image src="../../images/homePage/add.png" class="homePageIcon"></image>
+      </view>
+    </button>
+  </view>
+
+  <view class="search">
+    <button class="button1" style="width:350rpx;height:350rpx" bindtap="searchButton">
+      <view class="buttonContent">
+        <text>搜索</text>
+        <image src="../../images/homePage/search.png" class="homePageIcon"></image>
+      </view>
+    </button>
+  </view>
+  <!-- 最新公告 -->
+  <view>
+    <view class="line"></view>
+    <view class="notice">
+      <text class="red" space="emsp">实时公告:</text>{{notice}}</view>
+    <view class="notice">
+      <text class="red" space="emsp">更新时间:</text>{{time}}
+    </view>
+  </view>
+  <view class="line"></view>
+</view>

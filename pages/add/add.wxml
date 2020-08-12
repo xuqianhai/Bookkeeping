@@ -1,0 +1,25 @@
+<!--pages/add/add.wxml-->
+<view class="allInput">
+  <form bindsubmit="bindsubmit">
+    <view class="money">
+      <input placeholder="0.00" style="height: 100rpx;font-size: 70rpx" type="number" name="money" confirm-type="next" />
+    </view>
+
+    <view class="information">
+      <view class="content">
+        <text>姓名</text>
+        <input placeholder="填写姓名" name="name" confirm-type="next" />
+      </view>
+      <view class="content">
+        <text>事件</text>
+        <input placeholder="事件" name="event" confirm-type="next" />
+      </view>
+      <view class="content">
+        <text>备注</text>
+        <input placeholder="备注" name="remarks" confirm-type="done" />
+      </view>
+    </view>
+    <button form-type="submit" style="width:90%" class="addButton">添加</button>
+    <button form-type="reset" style="width:90%" class="addButton">下一个</button>
+  </form>
+</view>

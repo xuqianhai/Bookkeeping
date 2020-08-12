@@ -1,0 +1,54 @@
+<!--index.wxml-->
+<!-- 获取用户信息 -->
+<view class="container">
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+<view class="allButton">
+
+  <button class="button1" style="width: 100%" open-type ="share">
+    <view class="view1">
+      <image src="../../images/about/share.png" class="image1"></image>
+      <text class="text1">转发分享</text>
+    </view>
+    <image src="../../images/about/arrow.png" class="image1"></image>
+  </button>
+
+  <button class="button1"  style="width: 100% " open-type ="contact">
+    <view class="view1">
+      <image src="../../images/about/customerService.png" class="image1"></image>
+      <text class="text1">联系客服</text>
+    </view>
+    <image src="../../images/about/arrow.png" class="image1"></image>
+  </button>
+
+  <button class="button1 "  style="width: 100%" open-type="feedback">
+    <view class="view1">
+      <image src="../../images/about/feedback.png" class="image1"></image>
+      <text class="text1">意见反馈</text>
+    </view>
+    <image src="../../images/about/arrow.png" class="image1"></image>
+  </button>
+
+  <button class="button1"  style="width: 100%" bindtap="bindAuthor">
+    <view class="view1">
+      <image src="../../images/about/author.png" class="image1"></image>
+      <text class="text1">关于作者</text>
+    </view>
+    <image src="../../images/about/arrow.png" class="image1"></image>
+  </button>
+
+  <button class="button1"  style="width: 100%" bindtap="bindDisclaimer">
+    <view class="view1">
+      <image src="../../images/about/disclaimer.png" class="image1"></image>
+      <text class="text1">免责声明</text>
+    </view>
+    <image src="../../images/about/arrow.png" class="image1"></image>
+  </button>
+
+</view>

@@ -1,0 +1,45 @@
+/* pages/search/search.wxss */
+
+.list {
+  padding: 20rpx;
+}
+
+.line {
+  border: 4rpx solid #205fdd;
+  width: 690rpx;
+
+}
+
+.clearButton {
+  border-radius: 50rpx;
+  background-color: #e715158c;
+  color: rgb(253, 252, 252);
+  margin-left: 80rpx
+}
+.clearButton:active{
+  background-color: #ada0a0e1;
+}
+
+.lines {
+  height: 10rpx;
+  color: #205fdd;
+}
+
+.text1 {
+  display: block;
+}
+
+.red {
+  color: red;
+}
+.input1{
+  display: inline-block;
+}
+
+.searchButton {
+  margin: 50rpx 0;
+  padding: 20rpx;
+  border-radius: 100rpx;
+  background-color: #3cafe9;
+  color: rgb(253, 252, 252);
+}
